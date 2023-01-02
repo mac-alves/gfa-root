@@ -1,0 +1,15 @@
+<single-spa-router>
+  <div id="single-spa-load-error"></div>
+
+  <main>
+    <route path="/configs">
+      <application name="@gfa/mfe-configs" loader="loader"></application>
+    </route>
+    <route path="/tickets">
+      <application name="@gfa/mfe-tickets" loader="loader"></application>
+    </route>
+    <route default>
+      <application name="@gfa/mfe-main"></application>
+    </route>
+  </main>
+</single-spa-router>
