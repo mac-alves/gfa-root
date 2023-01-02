@@ -18,8 +18,14 @@
   -->
 
   <main>
+    <route path="/configs">
+      <application name="@gfa/mfe-configs"></application>
+    </route>
+    <route path="/tickets">
+      <application name="@gfa/mfe-tickets"></application>
+    </route>
     <route default>
-      <application name="@single-spa/welcome"></application>
+      <application name="@gfa/mfe-main"></application>
     </route>
   </main>
 </single-spa-router>
