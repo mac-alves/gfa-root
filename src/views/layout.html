@@ -2,6 +2,9 @@
   <div id="single-spa-load-error"></div>
 
   <main>
+    <route path="/auth">
+      <application name="@gfa/mfe-auth" loader="loader"></application>
+    </route>
     <route path="/configs">
       <application name="@gfa/mfe-configs" loader="loader"></application>
     </route>
