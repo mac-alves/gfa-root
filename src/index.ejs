@@ -38,24 +38,26 @@
       }
     }
   </script>
+
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
-  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
-
+  
   <% if (isLocal) { %>
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@gfa/root-config": "//localhost:9000/gfa-root-config.js",
-        "@gfa/gfa-infra":	"//localhost:8080/gfa-gfa-infra.js",
-        "@gfa/mfe-auth": "//localhost:4203/main.js",
-        "@gfa/mfe-main": "//localhost:4202/main.js",
-        "@gfa/mfe-configs": "//localhost:4201/main.js",
-        "@gfa/mfe-tickets": "//localhost:4200/main.js"
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@gfa/root-config": "//localhost:9000/gfa-root-config.js",
+          "@gfa/gfa-infra":	"//localhost:8080/gfa-infra.js",
+          "@gfa/mfe-auth": "//localhost:4203/main.js",
+          "@gfa/mfe-main": "//localhost:4202/main.js",
+          "@gfa/mfe-configs": "//localhost:4201/main.js",
+          "@gfa/mfe-tickets": "//localhost:4200/main.js"
+        }
       }
-    }
-  </script>
+    </script>
+  <% } else { %>
+      <script type="systemjs-importmap" src="/importmap.json"></script>
   <% } %>
 
   <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
